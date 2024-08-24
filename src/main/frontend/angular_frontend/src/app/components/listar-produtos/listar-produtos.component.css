@@ -1,0 +1,70 @@
+.btn-Cadastrar{
+  background-color: #28a745; /* Azul padrão para o botão primário */
+  margin-bottom: 10px;
+}
+
+.table-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #333;
+  color: #fff;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  font-weight: bold;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn-primary {
+  background-color: #007bff; /* Azul padrão */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Azul escuro para o efeito hover */
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Vermelho para exclusão */
+}
+
+.btn-danger:hover {
+  background-color: #c82333; /* Vermelho escuro para o efeito hover */
+}

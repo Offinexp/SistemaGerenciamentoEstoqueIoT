@@ -1,0 +1,29 @@
+<!-- Listar Produtos Component HTML -->
+
+<div class="table-container">
+  <h2>Lista de Produtos</h2>
+
+  <button class="btn btn-primary" (click)="navigateToCadastro()">Novo Produto</button>
+
+  <thead>
+  <tr>
+    <th>Nome</th>
+    <th>Descrição</th>
+    <th>Preço</th>
+    <th>Quantidade</th>
+    <th>Ações</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let produto of produtos">
+    <td>{{ produto.nome }}</td>
+    <td>{{ produto.descricao }}</td>
+    <td>{{ produto.preco | currency:'BRL':true }}</td>
+    <td>{{ produto.quantidade }}</td>
+    <td>
+      <button class="btn btn-primary" (click)="editProduto(produto.id)">Editar</button>
+      <button class="btn btn-danger" (click)="deleteProduto(produto.id)">Excluir</button>
+    </td>
+  </tr>
+  </tbody>
+</div>

@@ -1,0 +1,120 @@
+.button-container {
+  text-align: initial;
+  margin-bottom: 60px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745; /* Verde */
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #28a745;
+}
+
+.btn-saving {
+  background-color: #28a745; /* Azul padrão para o botão primário */
+  margin-bottom: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #28a745; /* Azul escuro para o efeito hover */
+}
+
+.btnDelete{
+  background-color: #c82333;
+}
+
+.btnEdit{
+  background-color: #333333;
+}
+
+
+.table-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos da tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #333333;
+  color: #fff;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  font-weight: bold;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Estilos dos inputs e spans */
+input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+span {
+  display: inline-block;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  max-width: 800px;
+  margin: 5px auto;
+  padding: 20px;
+}
+
+button {
+  padding: 10px 12px;
+  border: none;
+  border-radius:4px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/*!* Botão de editar *!*/
+/*button:first-of-type {*/
+/*  background-color: #333333;*/
+/*}*/
+
+/*!* Botão de deletar *!*/
+/*button:last-of-type {*/
+/*  background-color: #dc3545;*/
+/*}*/

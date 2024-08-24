@@ -1,0 +1,36 @@
+<!-- Listar Pessoas Component HTML -->
+
+<div class="table-container">
+  <h2>Gerenciar Usuários</h2>
+
+
+  <button class="btn btn-saving" (click)="navigateToCadastro()">Novo usuário</button>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let pessoa of pessoas">
+      <td>
+        <input *ngIf="editMode[pessoa.id]" [(ngModel)]="pessoa.nome" placeholder="Nome">
+        <span *ngIf="!editMode[pessoa.id]">{{ pessoa.nome }}</span>
+      </td>
+      <td>
+        <input *ngIf="editMode[pessoa.id]" [(ngModel)]="pessoa.email" placeholder="Email">
+        <span *ngIf="!editMode[pessoa.id]">{{ pessoa.email }}</span>
+      </td>
+      <td>
+        <button class="btnEdit" (click)="toggleEditMode(pessoa.id)">
+          {{ editMode[pessoa.id] ? 'Salvar' : 'Editar' }}
+        </button>
+        <button class="btnDelete" (click)="deletePessoa(pessoa.id)">Deletar</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
