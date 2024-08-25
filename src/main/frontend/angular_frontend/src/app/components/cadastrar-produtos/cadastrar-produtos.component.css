@@ -1,7 +1,7 @@
 
 .form-container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 100px auto;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
@@ -36,13 +36,14 @@ h2 {
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
-  background-color: #28a745; /* Verde */
+  background-color: #00e832;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
+  width:100%;
 }
 
 .btn:hover {
-  background-color: #218838; /* Verde escuro para o efeito hover */
+  background-color: #218838;
 }

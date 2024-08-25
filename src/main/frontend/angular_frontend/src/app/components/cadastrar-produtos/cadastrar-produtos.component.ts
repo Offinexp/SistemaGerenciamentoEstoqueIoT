@@ -25,7 +25,7 @@ export class CadastrarProdutosComponent {
   cadastrarProduto(form: NgForm) {
     if (form.valid) {
       this.produtoService.addProduto(this.produto).subscribe(() => {
-        this.router.navigate(['/listar-produtos']);
+        this.router.navigate(['/cadastrar-produtos']);
       });
     }
   }

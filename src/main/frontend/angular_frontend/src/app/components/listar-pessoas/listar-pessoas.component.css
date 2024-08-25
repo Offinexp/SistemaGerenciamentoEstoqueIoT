@@ -32,22 +32,21 @@
 }
 
 .btnEdit{
-  background-color: #333333;
+  background-color: #373be4;
 }
-
 
 .table-container {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 20px;
+  max-width: 1000px;
+  margin: 100px auto;
+  padding: 50px;
   background-color: #fff;
-  border-radius: 15px;
+  border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
 }
 
-/* Estilos da tabela */
 table {
-  width: 100%;
+  width: 100%; /* Ajusta a tabela para a largura do contêiner */
   border-collapse: collapse;
 }
 
@@ -94,7 +93,7 @@ h2 {
 }
 
 button {
-  padding: 10px 12px;
+  padding: 10px 20px;
   border: none;
   border-radius:4px;
   color: #fff;

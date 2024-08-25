@@ -1,36 +1,27 @@
-.btn-Cadastrar{
-  background-color: #28a745; /* Azul padrão para o botão primário */
-  margin-bottom: 10px;
-}
-
 .table-container {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 20px;
+  width: 60%; /* Ajusta o contêiner para preencher a largura disponível */
+  margin: 40px auto;
+  padding: 10px;
   background-color: #fff;
-  border-radius: 15px;
+  border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  text-align: center;
-  color: #333;
-  font-size: 2rem;
-  margin-bottom: 20px;
+  overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
 }
 
 table {
-  width: 100%;
+  width: 100%; /* Ajusta a tabela para a largura do contêiner */
   border-collapse: collapse;
+  box-sizing: border-box; /* Inclui padding e bordas na largura total */
 }
+
 
 thead {
   background-color: #333;
   color: #fff;
 }
 
-th, td {
-  padding: 10px;
+th, td, h2 {
+  padding: 20px; /* Ajuste o padding conforme necessário */
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
@@ -44,7 +35,7 @@ tbody tr:hover {
 }
 
 .btn {
-  padding: 8px 12px;
+  padding: 10px 20px;
   border: none;
   border-radius: 4px;
   color: #fff;

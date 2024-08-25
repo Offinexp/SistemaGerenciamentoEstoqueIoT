@@ -1,21 +1,21 @@
-<!-- Adicionar Pessoa Component HTML -->
-<div class="container">
-  <h1>Novo Usuário</h1>
-  <form (ngSubmit)="onSubmit()">
-    <div class="  form-group">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" [(ngModel)]="pessoa.nome" name="nome" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Insira seu Email:</label>
-      <input type="email" id="email" [(ngModel)]="pessoa.email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="senha">Crie sua senha:</label>
-      <input type="password" id="senha" [(ngModel)]="pessoa.senha" name="senha" required>
-    </div>
-    <div class="form-group">
-      <button type="submit">Salvar</button>
-    </div>
-  </form>
-</div>
+  <!-- Adicionar Pessoa Component HTML -->
+  <div class="container">
+    <h1>Novo Usuário</h1>
+    <form (ngSubmit)="onSubmit()">
+      <div class="  form-group">
+        <label for="nome">Nome:*</label>
+        <input type="text" id="nome" [(ngModel)]="pessoa.nome" name="nome" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Insira seu Email:*</label>
+        <input type="email" id="email" [(ngModel)]="pessoa.email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="senha">Crie sua senha:*</label>
+        <input type="password" id="senha" [(ngModel)]="pessoa.senha" name="senha" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Salvar</button>
+      </div>
+    </form>
+  </div>

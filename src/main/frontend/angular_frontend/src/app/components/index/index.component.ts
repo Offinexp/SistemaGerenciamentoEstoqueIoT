@@ -1,12 +1,15 @@
+// index.component.ts
 import { Component } from '@angular/core';
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-index',
-  standalone: true,
-  imports: [],
   templateUrl: './index.component.html',
-  styleUrl: './index.component.css'
-})
-export class IndexComponent {
+  standalone: true,
+  imports: [
+    RouterLink
+  ],
 
-}
+  styleUrls: ['./index.component.css']
+})
+export class IndexComponent {}

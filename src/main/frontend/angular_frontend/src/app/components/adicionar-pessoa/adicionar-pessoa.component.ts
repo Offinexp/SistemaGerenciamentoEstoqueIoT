@@ -4,6 +4,7 @@ import { Pessoa } from '../../models/pessoa.model';
 import { FormsModule } from '@angular/forms';
 import {CommonModule} from "@angular/common";
 import {Router} from "@angular/router";
+import {ProdutoService} from "../../services/produto.service";
 
 
 @Component({
@@ -40,6 +41,7 @@ export class AdicionarPessoaComponent {
       senha: ''
     };
   }
+
 
   navigateToCadastro() {
     this.router.navigate(['/adicionar-pessoa']);

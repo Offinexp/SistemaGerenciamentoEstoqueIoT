@@ -1,0 +1,35 @@
+<div class="welcome-container">
+  <h1>Bem-vindo ao Gerenciamento de Estoque</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="container-content">
+        <i class="fas fa-box-open icon"></i>
+        <h2>Inventário</h2>
+        <p>Gerencie seu inventário de produtos, adicione novos itens e visualize o estoque atual.</p>
+        <button class="btn btn-primary" [routerLink]="['/cadastrar-produtos']">
+          <i class="fas fa-plus-circle"></i> Adicionar Produto
+        </button>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="container-content">
+        <i class="fas fa-chart-line icon"></i>
+        <h2>Relatórios</h2>
+        <p>Visualize relatórios detalhados sobre o desempenho de suas vendas e o status do estoque.</p>
+        <button class="btn btn-secondary" [routerLink]="['/listar-produtos']">
+          <i class="fas fa-file-alt"></i> Ver Relatórios
+        </button>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="container-content">
+        <i class="fas fa-users icon"></i>
+        <h2>Usuários</h2>
+        <p>Gerencie as informações dos usuários, incluindo criação de contas e permissões de acesso.</p>
+        <button class="btn btn-success" [routerLink]="['/adicionar-pessoa']">
+          <i class="fas fa-user-plus"></i> Adicionar Usuário
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

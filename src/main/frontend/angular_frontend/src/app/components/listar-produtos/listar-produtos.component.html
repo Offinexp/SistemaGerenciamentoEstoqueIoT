@@ -3,27 +3,44 @@
 <div class="table-container">
   <h2>Lista de Produtos</h2>
 
-  <button class="btn btn-primary" (click)="navigateToCadastro()">Novo Produto</button>
+  <!-- Botão para exportar -->
+  <button class="btn btn-success" (click)="exportToExcel()">Exportar para XLSX</button>
 
-  <thead>
-  <tr>
-    <th>Nome</th>
-    <th>Descrição</th>
-    <th>Preço</th>
-    <th>Quantidade</th>
-    <th>Ações</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let produto of produtos">
-    <td>{{ produto.nome }}</td>
-    <td>{{ produto.descricao }}</td>
-    <td>{{ produto.preco | currency:'BRL':true }}</td>
-    <td>{{ produto.quantidade }}</td>
-    <td>
-      <button class="btn btn-primary" (click)="editProduto(produto.id)">Editar</button>
-      <button class="btn btn-danger" (click)="deleteProduto(produto.id)">Excluir</button>
-    </td>
-  </tr>
-  </tbody>
+  <table>
+    <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descrição</th>
+      <th>Preço</th>
+      <th>Quantidade</th>
+      <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let produto of produtos">
+      <td>
+        <input *ngIf="editMode[produto.id]" [(ngModel)]="produto.nome" placeholder="Nome">
+        <span *ngIf="!editMode[produto.id]">{{ produto.nome }}</span>
+      </td>
+      <td>
+        <input *ngIf="editMode[produto.id]" [(ngModel)]="produto.descricao" placeholder="Descrição">
+        <span *ngIf="!editMode[produto.id]">{{ produto.descricao }}</span>
+      </td>
+      <td>
+        <input *ngIf="editMode[produto.id]" [(ngModel)]="produto.preco" placeholder="Preço">
+        <span *ngIf="!editMode[produto.id]">{{ produto.preco | currency:'BRL':true }}</span>
+      </td>
+      <td>
+        <input *ngIf="editMode[produto.id]" [(ngModel)]="produto.quantidade" placeholder="Quantidade">
+        <span *ngIf="!editMode[produto.id]">{{ produto.quantidade }}</span>
+      </td>
+      <td>
+        <button class="btn btn-primary" (click)="toggleEditMode(produto.id)">
+          {{ editMode[produto.id] ? 'Salvar' : 'Editar' }}
+        </button>
+        <button class="btn btn-danger" (click)="deleteProduto(produto.id)">Excluir</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
 </div>

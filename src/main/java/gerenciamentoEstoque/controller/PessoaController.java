@@ -5,7 +5,9 @@ import gerenciamentoEstoque.model.Pessoa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.Console;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/pessoa")
@@ -47,5 +49,16 @@ public class PessoaController {
     @DeleteMapping("/{id}")
     public void deletarPessoa(@PathVariable Long id) {
         pessoaRepository.deleteById(id);
+    }
+
+    // Autenticação (Login)
+    @PostMapping("/login")
+    public Pessoa loginPessoa(@RequestBody Pessoa loginDetalhes) {
+        Optional<Pessoa> pessoaOpt = pessoaRepository.findByEmail(loginDetalhes.getEmail());
+        if (pessoaOpt.isPresent() && pessoaOpt.get().getSenha().equals(loginDetalhes.getSenha())) {
+            return pessoaOpt.get();
+        } else {
+            throw new RuntimeException("Credenciais inválidas");
+        }
     }
 }
