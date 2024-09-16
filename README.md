@@ -20,7 +20,7 @@ O sistema também utiliza MQTT para comunicação entre dispositivos.
 
 - JDK 21
 - Node.js
-- Angular CLI
+- Angular 
 - PostgreSQL
 
 ## 🧩 Uso
